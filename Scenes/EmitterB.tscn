@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://caensagfoxdjq"]
+
+[ext_resource type="Script" path="res://Scripts/EmitterB.gd" id="1_x45ji"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wm7ai"]
+transparency = 1
+no_depth_test = true
+shading_mode = 0
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+albedo_color = Color(1, 0.564706, 1, 1)
+grow = true
+grow_amount = -1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_6xank"]
+material = SubResource("StandardMaterial3D_wm7ai")
+
+[sub_resource type="Gradient" id="Gradient_p5xg7"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.533058)
+colors = PackedColorArray(0.0235345, 2.59214e-05, 0.0974137, 0, 0.593901, 0.293254, 1, 1)
+
+[node name="EmitterB" type="Node3D"]
+script = ExtResource("1_x45ji")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="CpuParticles3d" type="CPUParticles3D" parent="Center"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0)
+amount = 1024
+lifetime = 4.0
+speed_scale = 0.5
+mesh = SubResource("SphereMesh_6xank")
+direction = Vector3(0, 0, 0)
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
+color_ramp = SubResource("Gradient_p5xg7")

@@ -1,0 +1,124 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1vje6eqfadbd"]
+
+[ext_resource type="Script" path="res://Scripts/Home.gd" id="1_psd02"]
+[ext_resource type="Texture2D" uid="uid://dob0vv0pmnr4i" path="res://Textures/Thumbnail1.png" id="2_hwq6r"]
+[ext_resource type="Texture2D" uid="uid://ciknct5mwnoj4" path="res://Textures/Thumbnail_2.png" id="3_8eeeb"]
+[ext_resource type="Texture2D" uid="uid://do1r6lfu7a3m8" path="res://Textures/Thumbnail_3.png" id="4_l7ib0"]
+[ext_resource type="Texture2D" uid="uid://drjx2mc0nda4k" path="res://Textures/Lizard_Top.jpg" id="5_e3rih"]
+
+[node name="Home" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_psd02")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.10041, 0.100316)
+
+[node name="World1" type="TextureButton" parent="Control"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3027.57
+offset_top = 1000.0
+offset_right = -1147.57
+offset_bottom = 1976.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_hwq6r")
+
+[node name="World2" type="TextureButton" parent="Control"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 975.912
+offset_top = 980.0
+offset_right = 2895.91
+offset_bottom = 1996.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("3_8eeeb")
+
+[node name="World3" type="TextureButton" parent="Control"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1035.83
+offset_top = 976.85
+offset_right = 880.165
+offset_bottom = 1988.85
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_l7ib0")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.78
+offset_top = -45.577
+offset_right = 32.2407
+offset_bottom = -19.577
+grow_horizontal = 2
+grow_vertical = 2
+text = "press Esc please"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1381.0
+offset_top = -832.0
+offset_right = -1302.0
+offset_bottom = -792.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(54.8504, 63.4835)
+mouse_filter = 2
+color = Color(0.729412, 0.945098, 0.709804, 0.329412)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.41123, 1.59665)
+mouse_filter = 2
+texture = ExtResource("5_e3rih")
+
+[connection signal="pressed" from="Control/World1" to="." method="_on_world_1_pressed"]
+[connection signal="pressed" from="Control/World2" to="." method="_on_world_2_pressed"]
+[connection signal="pressed" from="Control/World3" to="." method="_on_world_3_pressed"]

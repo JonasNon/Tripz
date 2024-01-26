@@ -1,0 +1,17 @@
+Change the blend mode of particles.
+/Emitter A to Multiply, Emitter B as well.
+
+Change the mesh shape.
+/Emiiter A Radius = 1, Height = 2
+
+Change the color over time
+
+Change spin speed in scripts
+/Emitter A to 1, 
+
+Change Draw Order in EmitterC Settings
+
+Hide the mesh
+
+
+

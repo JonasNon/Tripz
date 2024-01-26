@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://bkcb5psfw1h1o"]
+
+[ext_resource type="Script" path="res://Scripts/World1.gd" id="1_dhyx2"]
+[ext_resource type="PackedScene" uid="uid://b66qv5im5mw67" path="res://Scenes/EmitterA.tscn" id="1_gtpq8"]
+[ext_resource type="Environment" uid="uid://bjvrawudwrko4" path="res://Scenes/World1.tres" id="2_usvl5"]
+[ext_resource type="PackedScene" uid="uid://caensagfoxdjq" path="res://Scenes/EmitterB.tscn" id="3_8ylfp"]
+[ext_resource type="PackedScene" uid="uid://c1vje6eqfadbd" path="res://Scenes/Home.tscn" id="5_dpyqh"]
+
+[node name="Node3d" type="Node3D"]
+script = ExtResource("1_dhyx2")
+
+[node name="Camera3d" type="Camera3D" parent="."]
+
+[node name="Set A" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12.8436)
+
+[node name="EmitterA" parent="Set A" instance=ExtResource("1_gtpq8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -5)
+
+[node name="EmitterA2" parent="Set A" instance=ExtResource("1_gtpq8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -5)
+
+[node name="EmitterA3" parent="Set A" instance=ExtResource("1_gtpq8")]
+transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 1, 5, 0)
+
+[node name="EmitterA4" parent="Set A" instance=ExtResource("1_gtpq8")]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -1, -5, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("2_usvl5")
+
+[node name="Set B" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -34.4623)
+
+[node name="EmitterB" parent="Set B" instance=ExtResource("3_8ylfp")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0, 0)
+
+[node name="EmitterB2" parent="Set B" instance=ExtResource("3_8ylfp")]
+transform = Transform3D(-0.707107, 6.18172e-08, 0.707107, -8.74228e-08, -1, 0, 0.707107, -6.18172e-08, 0.707107, 0, 0, 0)
+
+[node name="EmitterB3" parent="Set B" instance=ExtResource("3_8ylfp")]
+transform = Transform3D(-4.37114e-08, -1, 0, 0.707107, -3.09086e-08, -0.707107, 0.707107, -3.09086e-08, 0.707107, 0, 0, 0)
+
+[node name="EmitterB4" parent="Set B" instance=ExtResource("3_8ylfp")]
+transform = Transform3D(1.19249e-08, 1, 0, -0.707107, 8.43216e-09, 0.707107, 0.707107, -8.43216e-09, 0.707107, 0, 0, 0)
+
+[node name="Home" parent="." instance=ExtResource("5_dpyqh")]

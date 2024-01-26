@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cimsseohd3wsn"]
+
+[ext_resource type="PackedScene" uid="uid://dty4s4pqoo6kw" path="res://Scenes/EmitterC.tscn" id="1_qqxxl"]
+[ext_resource type="PackedScene" uid="uid://c1vje6eqfadbd" path="res://Scenes/Home.tscn" id="2_8dlvf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ctg4a"]
+albedo_color = Color(0.0705882, 0, 0.592157, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vgg1d"]
+material = SubResource("StandardMaterial3D_ctg4a")
+
+[node name="World2" type="Node3D"]
+
+[node name="Camera3d" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.27226, 28.0456)
+
+[node name="Node3d" type="Node3D" parent="."]
+
+[node name="EmitterC" parent="Node3d" instance=ExtResource("1_qqxxl")]
+
+[node name="EmitterC2" parent="Node3d" instance=ExtResource("1_qqxxl")]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="MeshInstance3d" type="MeshInstance3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, -100, 0, 100, -4.37114e-06, 0, 0, -13.9993)
+mesh = SubResource("PlaneMesh_vgg1d")
+
+[node name="Home" parent="." instance=ExtResource("2_8dlvf")]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctrpdqne7mely"]
+
+[ext_resource type="PackedScene" uid="uid://dhh5dmkfnhnrh" path="res://Scenes/EmitterD.tscn" id="1_mpb6k"]
+[ext_resource type="PackedScene" uid="uid://c1vje6eqfadbd" path="res://Scenes/Home.tscn" id="2_y4xmj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dsoh2"]
+albedo_color = Color(0.407843, 0, 0.407843, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xd8uc"]
+
+[node name="World3" type="Node3D"]
+
+[node name="Camera3d" type="Camera3D" parent="."]
+
+[node name="EmitterD" parent="." instance=ExtResource("1_mpb6k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.1047)
+
+[node name="Node3d" type="Node3D" parent="."]
+
+[node name="EmitterD2" parent="Node3d" instance=ExtResource("1_mpb6k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -19.105)
+
+[node name="EmitterD3" parent="Node3d" instance=ExtResource("1_mpb6k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -19.105)
+
+[node name="Home" parent="." instance=ExtResource("2_y4xmj")]
+
+[node name="MeshInstance3d" type="MeshInstance3D" parent="."]
+transform = Transform3D(50, 0, 0, 0, -2.18557e-06, -50, 0, 50, -2.18557e-06, 0, 0, -21.1464)
+material_override = SubResource("StandardMaterial3D_dsoh2")
+mesh = SubResource("PlaneMesh_xd8uc")

@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://dty4s4pqoo6kw"]
+
+[ext_resource type="Script" path="res://Scripts/EmitterC.gd" id="1_vvm0u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krsss"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+
+[sub_resource type="TorusMesh" id="TorusMesh_cqnjv"]
+material = SubResource("StandardMaterial3D_krsss")
+inner_radius = 0.678
+
+[sub_resource type="Gradient" id="Gradient_p5xg7"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.809917, 1)
+colors = PackedColorArray(5.58317e-06, 0.678004, 0.849503, 0, 0.10554, 0.000159938, 0.214703, 1, 0.932342, 0.794589, 0, 0)
+
+[node name="EmitterC" type="Node3D"]
+script = ExtResource("1_vvm0u")
+
+[node name="Center" type="Node3D" parent="."]
+
+[node name="CpuParticles3d" type="CPUParticles3D" parent="Center"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10, 0, 0)
+amount = 3000
+lifetime = 10.0
+speed_scale = 0.2
+draw_order = 2
+mesh = SubResource("TorusMesh_cqnjv")
+direction = Vector3(0, 1, 0)
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
+color_ramp = SubResource("Gradient_p5xg7")
