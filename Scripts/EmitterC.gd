@@ -11,5 +11,5 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	rotation.z += 0.01
-	get_node("Center/CpuParticles3d").rotation.x += spinSpeed
+	get_node("Center/CpuParticles3d").rotation.x += spinSpeed * delta
 	

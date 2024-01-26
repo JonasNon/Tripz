@@ -3,7 +3,7 @@ extends Control
 
 
 var menuVis = MegaVariables.menuVis
-var buttons = get_node("Control")
+@onready var buttons = get_node("Control")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -46,18 +46,18 @@ func changeVis():
 
 func _on_world_1_pressed():
 	changeVis()
-	get_tree().change_scene("res://Scenes/World1.tscn")
+	get_tree().change_scene_to_file("res://Scenes/World1.tscn")
 	
 
 
 func _on_world_2_pressed():
 	changeVis()
-	get_tree().change_scene("res://Scenes/World2.tscn")
+	get_tree().change_scene_to_file("res://Scenes/World2.tscn")
 	
 
 
 func _on_world_3_pressed():
 	changeVis()
-	get_tree().change_scene("res://Scenes/World3.tscn")
+	get_tree().change_scene_to_file("res://Scenes/World3.tscn")
 	print("Three")
 	

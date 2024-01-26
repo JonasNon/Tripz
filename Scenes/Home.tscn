@@ -16,7 +16,7 @@ grow_vertical = 2
 script = ExtResource("1_psd02")
 
 [node name="Control" type="Control" parent="."]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -31,7 +31,7 @@ grow_vertical = 2
 scale = Vector2(0.10041, 0.100316)
 
 [node name="World1" type="TextureButton" parent="Control"]
-anchors_preset = 15
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -3027.57
@@ -43,7 +43,7 @@ grow_vertical = 2
 texture_normal = ExtResource("2_hwq6r")
 
 [node name="World2" type="TextureButton" parent="Control"]
-anchors_preset = 8
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -57,7 +57,7 @@ grow_vertical = 2
 texture_normal = ExtResource("3_8eeeb")
 
 [node name="World3" type="TextureButton" parent="Control"]
-anchors_preset = 8
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -71,7 +71,7 @@ grow_vertical = 2
 texture_normal = ExtResource("4_l7ib0")
 
 [node name="Label" type="Label" parent="."]
-anchors_preset = 8
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -87,7 +87,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 8
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -104,7 +104,7 @@ color = Color(0.729412, 0.945098, 0.709804, 0.329412)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 show_behind_parent = true
-anchors_preset = 8
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

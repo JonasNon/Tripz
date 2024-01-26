@@ -16,15 +16,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12.8436)
 
 [node name="EmitterA" parent="Set A" instance=ExtResource("1_gtpq8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -5)
+visible = false
 
 [node name="EmitterA2" parent="Set A" instance=ExtResource("1_gtpq8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -5)
+visible = false
 
 [node name="EmitterA3" parent="Set A" instance=ExtResource("1_gtpq8")]
 transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 1, 5, 0)
+visible = false
 
 [node name="EmitterA4" parent="Set A" instance=ExtResource("1_gtpq8")]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -1, -5, 0)
+visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("2_usvl5")
